@@ -20,7 +20,7 @@ class App extends Component {
     event.preventDefault();
     let newItems = this.state.items;
     if(event.target[0].value.length !==0){
-      newItems.push({name: event.target.value, id:this.state.id});
+      newItems.push({name: event.target[0].value, id:this.state.id});
       this.setState({
         items: newItems,
         id: this.state.id+1

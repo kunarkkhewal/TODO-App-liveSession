@@ -10,12 +10,12 @@ class EditItem extends Component{
 
     render(){
         return(
-            <div>
+            <div className='itemdiv'>
                 <form onSubmit={this.onEdit}>
                     <input type="text" placeholder="type changes here" defaultValue={this.props.name}/>
 
                     <br/><br/>
-                    <button type="submit">I am Back</button>
+                    <button type="submit">Update</button>
                 </form>
                 <Link to="/">Back</Link>
             </div>

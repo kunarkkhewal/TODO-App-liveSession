@@ -11,7 +11,7 @@ class Item extends Component {
         event.preventDefault();
         let newItem = this.props.item;
         if (event.target[0].value.length !== 0) {
-            newItem.name = event.target.value;
+            newItem.name = event.target[0].value;
             this.props.onEdit(newItem);
         }
     }
@@ -19,8 +19,7 @@ class Item extends Component {
     render() {
         return (
             <div>
-                <div>
-                    {console.log("in item",this.props.item)}
+                <div className='task'>
                     {this.props.item.name}
                 </div>
                 <div>
